@@ -10,13 +10,16 @@ export default function Home() {
 
   const getBandera = async () => {
     setLoading(true);
-    const data = await conseguirBandera()
-    fijarBandera(data)
+    const bdata = await conseguirBandera()
+    fijarBandera(bdata)
     setLoading(false);
   }
 
 
   useEffect(() => {
+    async function getBandera() {
+      
+    }
     getBandera();
   }, []);
   
