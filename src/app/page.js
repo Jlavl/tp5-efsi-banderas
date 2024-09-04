@@ -13,8 +13,6 @@ export default function Home() {
     const bdata = await conseguirBandera()
     fijarBandera(bdata)
     setLoading(false);
-    console.log(bdata)
-    return bdata;
   }
 
 
@@ -28,6 +26,11 @@ export default function Home() {
     return (
     <main className={styles.main}>
       <div className="container">
+      <h1>Mi bandera se llama {bandera.name}</h1>
+      <button
+        type="button"
+        onClick={updateColor}
+      >Blue</button>
       </div>
     </main>
   );
