@@ -13,19 +13,22 @@ export default function Home() {
     const bdata = await conseguirBandera()
     fijarBandera(bdata)
     setLoading(false);
+    console.log(bdata)
+    return bdata;
   }
 
 
   useEffect(() => {
-    async function getBandera() {
+    /*async function getBandera() {
       
-    }
-    getBandera();
+    }*/
+    console.log(getBandera())
   }, []);
   
     return (
     <main className={styles.main}>
-      <div className="container"></div>
+      <div className="container">
+      </div>
     </main>
   );
 }
