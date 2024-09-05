@@ -5,13 +5,14 @@ import { useState, useEffect } from "react";
 import { conseguirBandera } from "./components/bandera";
 
 export default function Home() {
-  const [bandera, fijarBandera] = useState(null);
+  var [bandera, fijarBandera] = useState(1);
   const [loading, setLoading] = useState(true);
 
   const getBandera = async () => {
     setLoading(true);
     const bdata = await conseguirBandera()
-    fijarBandera(bdata)
+    fijarBandera = bdata
+    console.log(bandera)
     setLoading(false);
   }
 
@@ -29,7 +30,6 @@ export default function Home() {
       <h1>Mi bandera se llama {bandera.name}</h1>
       <button
         type="button"
-        onClick={updateColor}
       >Blue</button>
       </div>
     </main>
