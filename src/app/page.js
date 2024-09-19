@@ -11,27 +11,32 @@ export default function Home() {
   const getBandera = async () => {
     setLoading(true);
     const bdata = await conseguirBandera()
-    fijarBandera = bdata
-    console.log(bandera)
+    fijarBandera(bdata)
+    //console.log(bdata)
     setLoading(false);
+  }
+  function getBopcion() {
+    const bdata = conseguirBandera()
+    return bdata.name;
+    //console.log(bdata)
   }
 
 
   useEffect(() => {
-    /*async function getBandera() {
-      fijarme como uso esto
-      
-    }*/
-    console.log(getBandera())
+
+    getBandera()
+
   }, []);
   
     return (
     <main className={styles.main}>
-      <div className="container">
-      <h1>Mi bandera se llama {bandera.name}</h1>
-      <button
-        type="button"
-      >Blue</button>
+      <div className={styles.container}>
+        <div className={styles.center}>
+          <img src={bandera.flag} width="40%" height="40%"></img>
+        </div>
+        <h1>Que bandera es esta?</h1>
+      
+        <button type="button">{bandera.name}</button>
       </div>
     </main>
   );
