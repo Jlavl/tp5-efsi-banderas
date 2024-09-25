@@ -3,7 +3,7 @@
 import axios from 'axios';
 export async function conseguirBandera() {
     const randomId = Math.floor(Math.random() * 500);
-    console.log(randomId)
+
     const response = await axios.get("https://countriesnow.space/api/v0.1/countries/flag/images");
     //console.log(Object.values(response.data.data)); // Recorrer array con el numero de arriba de alguna manera
     var resp = getRandomItem(response.data.data) 
@@ -15,7 +15,7 @@ export async function conseguirBandera() {
         const item = arr[randomIndex];
         return item;
     }
-
+    console.log(randomId)
     //console.log(resp)
     return resp;
 }

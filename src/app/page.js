@@ -45,9 +45,9 @@ export default function Home() {
         </div>
         <h1 className={styles.center}>Que bandera es esta?</h1>
       
-        <button type="button" className={styles.button}>{bandera.name}</button>
-        <button type="button"className={styles.button}>{banderaIC1.name}</button>
         <button type="button"className={styles.button}>{banderaIC2.name}</button>
+        <button type="button"className={styles.button}>{banderaIC1.name}</button>
+        <button type="button"className={styles.button}>{bandera.name}</button>
         <button type="button"className={styles.button}>{banderaIC3.name}</button>
       </div>
     </main>
