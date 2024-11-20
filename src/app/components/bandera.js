@@ -7,12 +7,12 @@ export async function conseguirBandera() {
     const response = await axios.get("https://countriesnow.space/api/v0.1/countries/flag/images");
     //console.log(Object.values(response.data.data)); // Recorrer array con el numero de arriba de alguna manera
     var resp = getRandomItem(response.data.data) 
-    
+     
     function getRandomItem(arr) {
         // get random index value
         const randomIndex = Math.floor(Math.random() * arr.length);
         // get random item
-        const item = arr[randomIndex];
+        const item = arr[andomIndex];
         return item;
     }
     console.log(randomId)
